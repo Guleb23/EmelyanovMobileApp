@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="EmelyanovApp.Pages.MainScreen.ProfilePage"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <BoxView BackgroundColor="#ffce2f" Grid.Row="0"></BoxView>
+
+            <StackLayout Grid.Row="0"  HorizontalOptions="Start" VerticalOptions="Center" Orientation="Horizontal" Margin="30, 0">
+                <abstractions:CircleImage   HeightRequest="80" BorderColor="Black"  BorderThickness="3" Source="../loginPage.png"></abstractions:CircleImage>
+                <Label VerticalOptions="Center" Text="Name" FontFamily="Montserrat" TextColor="Black" FontSize="16" ></Label>
+            </StackLayout>
+            <AbsoluteLayout>
+                <StackLayout AbsoluteLayout.LayoutBounds="0.5, 230, Autosize, Autosize" Spacing="20" AbsoluteLayout.LayoutFlags="XProportional" Orientation="Horizontal">
+                    <Frame HasShadow="True" xct:ShadowEffect.OffsetX="10"
+                           xct:ShadowEffect.OffsetY="10" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Color="Black" 
+                           xct:ShadowEffect.Opacity="1" HeightRequest="70" WidthRequest="120" CornerRadius="5"  BackgroundColor="#ffce2f">
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image HeightRequest="30" Source="../profileOrder.png"></Image>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="8"></Label>
+                                <Label TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="заказов"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+                    <Frame HasShadow="True" xct:ShadowEffect.OffsetX="10"
+                            xct:ShadowEffect.OffsetY="10" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Color="Black" 
+                             xct:ShadowEffect.Opacity="1" HeightRequest="70" WidthRequest="120" CornerRadius="5"  BackgroundColor="#ffce2f">
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Image HeightRequest="30" Source="../profileMoney.png"></Image>
+                            <StackLayout Orientation="Horizontal">
+                                <Label HorizontalOptions="Center"  TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="8"></Label>
+                                <Label TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="потрачено"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+            </AbsoluteLayout>
+            <StackLayout Spacing="20" Grid.Row="1" Margin="40, 60">
+                <StackLayout>
+                    <Label Text="Имя"></Label>
+                    <Entry x:Name="txbFirstName" ></Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Фамилия"></Label>
+                    <Entry x:Name="txbLastName" ></Entry>
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="Номер телефона"></Label>
+                    <Entry x:Name="txbPhone" ></Entry>
+                </StackLayout>
+                <Button Clicked="Button_Clicked"  Text="Обновить" CornerRadius="5" BackgroundColor="#ffce2f"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

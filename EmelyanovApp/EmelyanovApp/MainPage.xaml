@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmelyanovApp.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout BackgroundColor="White" HorizontalOptions="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <BoxView BackgroundColor="Transparent" HeightRequest="20"></BoxView>
+            <StackLayout Grid.Row="1" Padding="40, 0">
+                <Label   Text="Начни покупать у нас!"
+       FontSize="40" HorizontalTextAlignment="Center" TextColor="#002657"
+       FontFamily="Montserrat"></Label>
+            </StackLayout>
+            
+            <StackLayout Grid.Row="2" Margin="20, 0" VerticalOptions="Center" HorizontalOptions="Center">
+                <Image  Source="../lo.png"></Image>
+            </StackLayout>
+            <StackLayout Spacing="10" Grid.Row="3" HorizontalOptions="CenterAndExpand">
+                <Button HorizontalOptions="Center" Text="Поставщик" Clicked="GoCreateProvider" CornerRadius="10" TextColor="Black"
+                        BackgroundColor="#FFB703" WidthRequest="300" ></Button>
+                <Button HorizontalOptions="Center" Text="Заказчик" CornerRadius="10" TextColor="Black"
+                        WidthRequest="300" BackgroundColor="#FB8500" Clicked="GoCreateClient"></Button>
+                <Label HorizontalTextAlignment="Center" Text="Если у вас уже есть аккаунт, то войдите" FontSize="14" ></Label>
+                <Button HorizontalOptions="Center" Text="Войти" CornerRadius="10" TextColor="Black"
+                        WidthRequest="300" BackgroundColor="#c0e6e4" Clicked="Login"></Button>
+                
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmelyanovApp.Pages.MainScreen.AboutOrder">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="15">
+                <StackLayout >
+                    <Label FontSize="14" TextColor="Black"  x:Name="txbCategory"></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Label FontSize="12" x:Name="txbId"></Label>
+                </StackLayout>
+
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label FontSize="18" TextColor="#42aaff" Text="cena" x:Name="txbPrice"></Label>
+                        <Label FontSize="18" TextColor="#42aaff" Text="₽"></Label>
+                    </StackLayout>
+                    <Label FontSize="12" Text="Подача заявок"></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Label FontSize="14" TextColor="Black" x:Name="txbDescription"></Label>
+                </StackLayout>
+            </StackLayout>
+            <BoxView HeightRequest="1" BackgroundColor="#42aaff"></BoxView>
+            <StackLayout Margin="15" Spacing="15">
+
+                <StackLayout Orientation="Vertical"  >
+                    <Label Padding="0" Margin="0"  Text="Способ определения поставщика (подразделения, исполнителя)" FontSize="12"></Label>
+                    <Label Padding="0" Margin="0"  Text="Запрос котировок в электронной форме" FontSize="14" TextColor="Black"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Адрес электронной площадки" FontSize="12"></Label>
+                    <Label Text="https://ru-tender.ru" FontSize="14" TextColor="Black"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Информаия о банковском и (или) казначейское сопровождение" FontSize="12"></Label>
+                    <Label Text="Банковского или казначейского сопровождения не требуется" FontSize="14" TextColor="Black"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Информация указана по местному времени организации, осущетвляющей закупку" FontSize="12"></Label>
+                    <Label Text="МОСКВА МСК (UTC +3)" TextColor="Black" FontSize="14" ></Label>
+                </StackLayout>
+            </StackLayout>
+            <Button Clicked="Button_Clicked" Text="Открыть документ"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

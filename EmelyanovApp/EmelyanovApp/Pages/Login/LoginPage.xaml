@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmelyanovApp.Pages.Login.LoginPage">
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout >
+               
+            </StackLayout>
+            <StackLayout Grid.Row="1" Spacing="20" HorizontalOptions="Center" >
+                <StackLayout Orientation="Horizontal" Spacing="15" VerticalOptions="Center">
+                    
+                    <Entry WidthRequest="300" Placeholder="Ваш логин" FontSize="14" x:Name="txbLog"></Entry>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    
+                    <Entry WidthRequest="300" Placeholder="Ваш пароль" FontSize="14" x:Name="txbPass" IsPassword="True"></Entry>
+                </StackLayout>
+                <Button HorizontalOptions="Center" Text="Войти" CornerRadius="10" TextColor="Black"
+        WidthRequest="300" BackgroundColor="#c0e6e4" Clicked="Button_Clicked" ></Button>
+            </StackLayout>
+
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

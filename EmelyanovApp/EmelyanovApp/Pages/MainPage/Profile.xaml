@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmelyanovApp.Pages.MainPage.Profile"
+             Title="Личный кабинет">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                    <Image Source="../user.png" HeightRequest="100"></Image>
+                </StackLayout>
+                <StackLayout Grid.Column="1"  VerticalOptions="Center" >
+
+                    <StackLayout Orientation="Horizontal">
+                       
+                        <Label Text="Имя:"></Label>
+                        <Label x:Name="txbName"></Label>
+                        
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="ИНН:"></Label>
+                        <Label x:Name="txbInn"></Label>
+                        
+                    </StackLayout>
+                    <BoxView HeightRequest="1" BackgroundColor="LightGray"></BoxView>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

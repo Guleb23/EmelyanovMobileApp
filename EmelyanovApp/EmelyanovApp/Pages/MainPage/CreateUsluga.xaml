@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmelyanovApp.Pages.MainPage.CreateUsluga">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Entry x:Name="txbName" Placeholder="Название"></Entry>
+            <Editor x:Name="txbDescription" Placeholder="Описание"></Editor>
+            <Picker SelectedIndexChanged="category_SelectedIndexChanged" ItemDisplayBinding="{Binding Name}" x:Name="category"></Picker>
+            <Entry x:Name="txbPrice" Placeholder="Цена"></Entry>
+            <Button Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

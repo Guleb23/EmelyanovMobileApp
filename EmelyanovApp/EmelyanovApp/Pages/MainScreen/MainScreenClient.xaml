@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EmelyanovApp.Pages.MainScreen"
+            x:Class="EmelyanovApp.Pages.MainScreen.MainScreenClient" NavigationPage.HasNavigationBar="False"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarTextColor="Black"
+            BarBackgroundColor="#c0e6e4">
+  <!--Pages can be added as references or inline-->
+    <local:All Title="Поиск"></local:All>
+    <local:Catalog Title="Каталог"></local:Catalog>
+    <local:ProfilePage Title="Профиль" />
+</TabbedPage>

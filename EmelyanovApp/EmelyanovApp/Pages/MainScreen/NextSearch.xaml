@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmelyanovApp.Pages.MainScreen.NextSearch" >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <CollectionView BindingContext="{Binding Uslugis}"  x:Name="myColView" Margin="10">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="2" Orientation="Vertical"></LinearItemsLayout>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate >
+                            <StackLayout Spacing="20" Margin="15" >
+                                <Frame >
+                                    <Grid >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="0" >
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Номер:" FontSize="12"></Label>
+                                                <Label Text="{Binding Id}" FontSize="12"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        
+
+                                        <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                            <Label Text="{Binding Name}" FontSize="20" TextColor="Black" FontAttributes="Bold"></Label>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Grid.Row="2">
+                                            <Label Text="{Binding Description}"></Label>
+
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Grid.Row="3">
+                                            <Label Text="Цена:"></Label>
+                                            <Label Text="{Binding Price}"></Label>
+                                        </StackLayout>
+                                        
+                                        <Button  Text="Подробнее" Grid.Row="3" Grid.Column="0" BackgroundColor="#ccccff" Clicked="btn_Clicked" ></Button>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
