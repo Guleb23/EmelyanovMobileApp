@@ -8,6 +8,6 @@
             BarBackgroundColor="#c0e6e4">
   <!--Pages can be added as references or inline-->
     <local:All Title="Поиск"></local:All>
-    <local:Catalog Title="Каталог"></local:Catalog>
+    <local:Catalog Title="Мои заказы"></local:Catalog>
     <local:ProfilePage Title="Профиль" />
 </TabbedPage>

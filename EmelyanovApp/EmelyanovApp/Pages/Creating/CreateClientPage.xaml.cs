@@ -37,7 +37,8 @@ namespace EmelyanovApp.Pages.Creating
                     LastName = txbLastName.Text,
                     Phone = txbPhone.Text,
                     Login = txbLogin.Text,
-                    Password = txbPassword.Text
+                    Password = txbPassword.Text,
+                    Favorite = "1"
 
                 };
                 string path = "http://10.0.2.2:5223/CreateClient";

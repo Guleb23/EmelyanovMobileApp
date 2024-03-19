@@ -22,9 +22,9 @@
                             <DataTemplate >
                                 <StackLayout Spacing="20" Margin="15" >
                                     <Frame >
-                                        <Grid >
+                                        <Grid RowSpacing="20" >
                                             <Grid.RowDefinitions>
-                                                <RowDefinition Height="*"></RowDefinition>
+                                                <RowDefinition Height="auto"></RowDefinition>
                                                 <RowDefinition Height="auto"></RowDefinition>
                                                 <RowDefinition Height="auto"></RowDefinition>
                                                 <RowDefinition Height="auto"></RowDefinition>
@@ -44,8 +44,11 @@
                                             <StackLayout Orientation="Horizontal" Grid.Row="1">
                                                 <Label Text="{Binding Name}" FontSize="20" TextColor="Black" FontAttributes="Bold"></Label>
                                             </StackLayout>
-                                            <StackLayout Orientation="Horizontal" Grid.Row="2">
-                                                <Label Text="{Binding Description}"></Label>
+                                            <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
+                                                <ScrollView>
+                                                    <Label Text="{Binding Description}"></Label>
+                                                </ScrollView>
+                                                
 
                                             </StackLayout>
 

@@ -1,4 +1,5 @@
-﻿using EmelyanovDiplom.Models;
+﻿using EmelyanovApp.Helper;
+using EmelyanovDiplom.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace EmelyanovApp.Pages.MainScreen
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Catalog : ContentPage
     {
+        public static List<Uslugi> newUslug = new List<Uslugi>();
         HttpClient client;
         public Catalog()
         {
@@ -26,20 +28,26 @@ namespace EmelyanovApp.Pages.MainScreen
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            List<Order> allOrders = await GetOrders();
-            List<Uslugi> allUslugi = await GetZayavks();
-            List<Uslugi> newUslug = new List<Uslugi>();
-            foreach (var uslug in allUslugi)
-            {
-                foreach (var order in allOrders)
-                {
-                    if(uslug.Id == order.IdUslugi)
-                    {
-                        newUslug.Add(uslug);
-                    }
-                }
-            }
-            myColView.ItemsSource = newUslug;
+            //List<Order> allOrders = await GetOrders();
+            //List<Uslugi> allUslugi = await GetZayavks();
+            //List<Uslugi> newUslug = new List<Uslugi>();
+            //foreach (var uslug in allUslugi)
+            //{
+            //    foreach (var order in allOrders)
+            //    {
+            //        if(uslug.Id == order.IdUslugi)
+            //        {
+            //           newUslug.Add(uslug);
+            //        }
+            //    }
+            //}
+            OrderHelper orderHelper = new OrderHelper();
+            newUslug = await orderHelper.GetGetCurrentOrders();
+            myColView.ItemsSource = newUslug.ToList();
+            //if(newUslug.Count > 0)
+            //{
+            //    Helper.OrderHelper.Orders = newUslug;
+            //}
         }
 
 

@@ -14,7 +14,7 @@
 
             <StackLayout Grid.Row="0"  HorizontalOptions="Start" VerticalOptions="Center" Orientation="Horizontal" Margin="30, 0">
                 <abstractions:CircleImage   HeightRequest="80" BorderColor="Black"  BorderThickness="3" Source="../loginPage.png"></abstractions:CircleImage>
-                <Label VerticalOptions="Center" Text="Name" FontFamily="Montserrat" TextColor="Black" FontSize="16" ></Label>
+                <Label VerticalOptions="Center" Text="Name" FontFamily="Montserrat" x:Name="txbName" TextColor="Black" FontSize="16" ></Label>
             </StackLayout>
             <AbsoluteLayout>
                 <StackLayout AbsoluteLayout.LayoutBounds="0.5, 230, Autosize, Autosize" Spacing="20" AbsoluteLayout.LayoutFlags="XProportional" Orientation="Horizontal">
@@ -24,7 +24,7 @@
                         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                             <Image HeightRequest="30" Source="../profileOrder.png"></Image>
                             <StackLayout Orientation="Horizontal">
-                                <Label HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="8"></Label>
+                                <Label x:Name="txbCount" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" ></Label>
                                 <Label TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="заказов"></Label>
                             </StackLayout>
 
@@ -35,8 +35,8 @@
                              xct:ShadowEffect.Opacity="1" HeightRequest="70" WidthRequest="120" CornerRadius="5"  BackgroundColor="#ffce2f">
                         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                             <Image HeightRequest="30" Source="../profileMoney.png"></Image>
-                            <StackLayout Orientation="Horizontal">
-                                <Label HorizontalOptions="Center"  TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="8"></Label>
+                            <StackLayout Orientation="Vertical">
+                                <Label HorizontalOptions="Center"  TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" x:Name="txbPrice"></Label>
                                 <Label TextColor="Black" FontAttributes="Bold" FontFamily="Montserrat" Text="потрачено"></Label>
                             </StackLayout>
 

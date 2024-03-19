@@ -46,7 +46,7 @@
                     <Label Text="МОСКВА МСК (UTC +3)" TextColor="Black" FontSize="14" ></Label>
                 </StackLayout>
             </StackLayout>
-            <Button Clicked="Button_Clicked" Text="Открыть документ"></Button>
+            <Button Clicked="Button_Clicked" BackgroundColor="#ccccff" Text="Открыть документ"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

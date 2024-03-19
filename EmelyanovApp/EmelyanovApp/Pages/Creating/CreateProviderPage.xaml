@@ -15,7 +15,7 @@
                         <Entry WidthRequest="300" Placeholder="Название компании" x:Name="txbName"></Entry>
                         <Entry WidthRequest="300" Placeholder="Ваш ИНН" Keyboard="Numeric" x:Name="txbINN"></Entry>
                         <Entry WidthRequest="300" Placeholder="Придумайте логин" x:Name="txbLogin"></Entry>
-                        <Entry WidthRequest="300" Placeholder="Придумайте пароль" x:Name="txbPassword"></Entry>
+                        <Entry IsPassword="True" WidthRequest="300" Placeholder="Придумайте пароль" x:Name="txbPassword"></Entry>
                         <Button HorizontalOptions="Center" Clicked="Button_Clicked" Text="Регистрация"  CornerRadius="10" TextColor="Black"
 BackgroundColor="#FFB703" WidthRequest="300" ></Button>
                     </StackLayout>
